@@ -1,0 +1,27 @@
+
+{
+  "settings": {
+    "show_all_public_repos": true,
+    "exclude_forks": true,
+    "exclude_archived": true,
+    "max_projects": 12,
+    "excluded_repos": [
+      "LauraMUD.github.io"
+    ]
+  },
+  "projects": {
+    "mining-project-graveyard": {
+      "featured": true,
+      "priority": 1,
+      "title": "Mining Project Graveyard",
+      "description_en": "Data engineering project focused on historical mining events, data validation and Bronze, Silver and Gold data architecture.",
+      "description_es": "Proyecto de ingeniería de datos centrado en eventos históricos mineros, validación de datos y arquitectura de datos Bronze, Silver y Gold.",
+      "technologies": [
+        "Python",
+        "PostgreSQL",
+        "SQL",
+        "Data Modeling"
+      ]
+    }
+  }
+}

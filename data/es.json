@@ -1,0 +1,19 @@
+
+{
+  "language": "es",
+  "nav_about": "Sobre mí",
+  "nav_skills": "Tecnologías",
+  "nav_projects": "Proyectos",
+  "nav_contact": "Contacto",
+  "greeting": "Hola, soy Laura.",
+  "headline": "Construyendo soluciones de datos fiables.",
+  "description": "Ingeniera de datos con experiencia en minería, energía y soluciones de datos industriales.",
+  "about_title": "Sobre mí",
+  "about_text": "Me especializo en transformar datos industriales complejos en soluciones de datos fiables y escalables.",
+  "skills_title": "Competencias técnicas",
+  "projects_title": "Proyectos destacados",
+  "contact_title": "Conectemos",
+  "view_projects": "Ver proyectos",
+  "view_repository": "Ver repositorio",
+  "featured": "Proyecto destacado"
+}

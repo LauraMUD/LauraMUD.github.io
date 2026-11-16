@@ -1,0 +1,32 @@
+# Entornos virtuales
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Caché
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Archivos temporales
+*.log
+.DS_Store
+Thumbs.db

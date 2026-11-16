@@ -1,0 +1,19 @@
+
+{
+  "language": "en",
+  "nav_about": "About me",
+  "nav_skills": "Skills",
+  "nav_projects": "Projects",
+  "nav_contact": "Contact",
+  "greeting": "Hi, I'm Laura.",
+  "headline": "Building reliable data solutions.",
+  "description": "Data Engineer with experience in mining, energy and industrial data solutions.",
+  "about_title": "About me",
+  "about_text": "I specialize in transforming complex industrial data into reliable and scalable data solutions.",
+  "skills_title": "Technical skills",
+  "projects_title": "Featured projects",
+  "contact_title": "Let's connect",
+  "view_projects": "View projects",
+  "view_repository": "View repository",
+  "featured": "Featured project"
+}
