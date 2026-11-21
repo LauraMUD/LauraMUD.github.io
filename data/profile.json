@@ -1,0 +1,36 @@
+
+{
+  "name": "Laura",
+  "professional_title": "Data Engineer",
+  "github_username": "LauraMUD",
+  "linkedin_url": "https://www.linkedin.com/in/laurau/",
+  "email": "luribediez@gmail.com",
+  "location": "Madrid, Spain",
+  "available_for_opportunities": false,
+"cv": {
+  "en": "static/cv/Laura_CV_EN.pdf",
+  "es": "static/cv/Laura_CV_ES.pdf"
+},
+  "skills": [
+    {
+      "category": "programming",
+      "items": ["Python", "SQL","Pyspark"]
+    },
+    {
+      "category": "databases",
+      "items": ["PostgreSQL","MySQL","SQL Server","Oracle"]
+    },
+    {
+      "category": "data_engineering",
+      "items": ["ETL / ELT", "Data Modeling"]
+    },
+    {
+      "category": "tools",
+      "items": ["Git", "GitHub"]
+    },
+    {
+      "category": "cloud",
+      "items": ["Azure","Databricks"]
+    }
+  ]
+}

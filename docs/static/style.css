@@ -430,3 +430,121 @@ a:focus-visible {
 .project-card .project-badge {
   font-weight: 600;
 }
+
+/* Day 4 - Professional profile */
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.industry-card,
+.tech-card,
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  transition: border-color .2s, transform .2s;
+}
+
+.industry-card:hover,
+.tech-card:hover,
+.contact-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.industry-icon {
+  font-size: 32px;
+  color: var(--accent);
+}
+
+.industry-card h3,
+.tech-card h3 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.industry-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.tech-card h3 {
+  color: var(--accent);
+  margin-top: 0;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-tags span {
+  background: rgba(45, 212, 191, .08);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-size: 13px;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 230px), 1fr)
+  );
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-card strong {
+  color: var(--text);
+  font-size: 19px;
+}
+
+.contact-card span {
+  color: var(--accent);
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-card,
+  .tech-card,
+  .contact-card {
+    padding: 22px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

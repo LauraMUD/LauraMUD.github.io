@@ -2,18 +2,63 @@
 {
   "language": "es",
   "nav_about": "Sobre mí",
+  "nav_experience": "Experiencia",
   "nav_skills": "Tecnologías",
   "nav_projects": "Proyectos",
   "nav_contact": "Contacto",
+
   "greeting": "Hola, soy Laura.",
-  "headline": "Construyendo soluciones de datos fiables.",
-  "description": "Ingeniera de datos con experiencia en minería, energía y soluciones de datos industriales.",
-  "about_title": "Sobre mí",
-  "about_text": "Me especializo en transformar datos industriales complejos en soluciones de datos fiables y escalables.",
-  "skills_title": "Competencias técnicas",
-  "projects_title": "Proyectos destacados",
-  "contact_title": "Conectemos",
+  "headline": "Transformando datos industriales en soluciones fiables.",
+  "description": "Ingeniera de datos con experiencia en minería, energía y construcción, enfocada en pipelines de datos, SQL y sistemas de datos industriales.",
+
   "view_projects": "Ver proyectos",
+  "contact_button": "Contactar",
+  "download_cv": "Descargar CV",
+
+  "about_title": "Sobre mí",
+  "about_text": "Soy ingeniera de datos con experiencia en sectores industriales como minería, energía y construcción. Mi trayectoria combina la ingeniería de datos con el conocimiento de las operaciones industriales. Me interesa desarrollar pipelines fiables, mejorar la calidad de los datos y crear soluciones escalables para entornos de datos complejos.",
+
+  "experience_title": "Experiencia industrial",
+  "experience_intro": "Conocimiento del sector industrial para conectar las soluciones técnicas con los desafíos reales de las operaciones.",
+
+  "industries": [
+    {
+      "icon": "⛏",
+      "name": "Minería",
+      "description": "Experiencia en el sector minero y conocimiento de los desafíos de datos en operaciones industriales."
+    },
+    {
+      "icon": "⚡",
+      "name": "Energía",
+      "description": "Experiencia en el sector energético y su contexto operativo."
+    },
+    {
+      "icon": "▦",
+      "name": "Construcción",
+      "description": "Experiencia en el sector de la construcción, incluyendo extracción y distribución de cemento."
+    }
+  ],
+
+  "skills_title": "Competencias técnicas",
+  "skills_intro": "Tecnologías y conceptos utilizados para desarrollar y mantener soluciones de datos.",
+
+  "skill_categories": {
+    "programming": "Programación",
+    "databases": "Bases de datos",
+    "data_engineering": "Ingeniería de datos",
+    "tools": "Herramientas de desarrollo",
+    "cloud": "Plataformas en la nube"
+  },
+
+  "projects_title": "Proyectos destacados",
+  "featured": "Destacado",
   "view_repository": "Ver repositorio",
-  "featured": "Proyecto destacado"
+
+  "contact_title": "Conectemos",
+  "contact_intro": "¿Te interesan la ingeniería de datos, los datos industriales y los proyectos tecnológicos? Explora mis proyectos o contacta conmigo.",
+  "github_label": "Explorar mi GitHub",
+  "linkedin_label": "Conectar en LinkedIn",
+  "email_label": "Enviarme un email",
+
+  "footer_text": "Desarrollado con Python y Jinja2"
 }

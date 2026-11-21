@@ -1,26 +1,41 @@
 
 {
   "settings": {
-    "show_all_public_repos": true,
+    "show_all_public_repos": false,
     "exclude_forks": true,
     "exclude_archived": true,
-    "max_projects": 12,
+    "max_projects": 2,
     "excluded_repos": [
       "LauraMUD.github.io"
     ]
   },
   "projects": {
-    "mining-project-graveyard": {
+    "industrial-data-lakehouse": {
       "featured": true,
       "priority": 1,
-      "title": "Mining Project Graveyard",
-      "description_en": "Data engineering project focused on historical mining events, data validation and Bronze, Silver and Gold data architecture.",
-      "description_es": "Proyecto de ingeniería de datos centrado en eventos históricos mineros, validación de datos y arquitectura de datos Bronze, Silver y Gold.",
+      "title": "Industrial Data Lakehouse",
+      "description_en": "End-to-end industrial data engineering pipeline built with PySpark, Delta Lake and Medallion Architecture. Features data quality validation, dimensional modeling, Prefect orchestration and automated CI testing.",
+      "description_es": "Pipeline integral de ingeniería de datos industriales con PySpark, Delta Lake y arquitectura Medallion. Incluye validación de calidad, modelado dimensional, orquestación con Prefect y pruebas automatizadas de integración continua.",
       "technologies": [
         "Python",
-        "PostgreSQL",
+        "PySpark",
+        "Delta Lake",
+        "Prefect",
+        "GitHub Actions"
+      ]
+    },
+    "industrial-operations-dbt": {
+      "featured": true,
+      "priority": 2,
+      "title": "Industrial Operations dbt",
+      "description_en": "Industrial analytics pipeline using dbt Core, DuckDB and SQL. Implements data quality tests, incremental processing, production and energy efficiency metrics, and automated CI validation.",
+      "description_es": "Pipeline de analítica industrial con dbt Core, DuckDB y SQL. Implementa pruebas de calidad, procesamiento incremental, métricas de producción y eficiencia energética, y validación automatizada mediante integración continua.",
+      "technologies": [
+        "dbt",
+        "DuckDB",
         "SQL",
-        "Data Modeling"
+        "Python",
+        "GitHub Actions"
       ]
     }
   }

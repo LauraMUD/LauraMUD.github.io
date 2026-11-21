@@ -1,19 +1,64 @@
 
 {
   "language": "en",
-  "nav_about": "About me",
+  "nav_about": "About",
+  "nav_experience": "Experience",
   "nav_skills": "Skills",
   "nav_projects": "Projects",
   "nav_contact": "Contact",
+
   "greeting": "Hi, I'm Laura.",
-  "headline": "Building reliable data solutions.",
-  "description": "Data Engineer with experience in mining, energy and industrial data solutions.",
-  "about_title": "About me",
-  "about_text": "I specialize in transforming complex industrial data into reliable and scalable data solutions.",
-  "skills_title": "Technical skills",
-  "projects_title": "Featured projects",
-  "contact_title": "Let's connect",
+  "headline": "Turning industrial data into reliable solutions.",
+  "description": "Data Engineer with experience across mining, energy and construction, focused on data pipelines, SQL and industrial data systems.",
+
   "view_projects": "View projects",
+  "contact_button": "Get in touch",
+  "download_cv": "Download CV",
+
+  "about_title": "About me",
+  "about_text": "I am a Data Engineer with experience across industrial sectors including mining, energy and construction. My background combines data engineering with an understanding of industrial operations. I am interested in building reliable data pipelines, improving data quality and creating scalable solutions for complex data environments.",
+
+  "experience_title": "Industry experience",
+  "experience_intro": "Industry knowledge that helps connect technical solutions with real operational challenges.",
+
+  "industries": [
+    {
+      "icon": "⛏",
+      "name": "Mining",
+      "description": "Experience in the mining sector and familiarity with data challenges across industrial operations."
+    },
+    {
+      "icon": "⚡",
+      "name": "Energy",
+      "description": "Experience in the energy sector and its operational context."
+    },
+    {
+      "icon": "▦",
+      "name": "Construction",
+      "description": "Experience in the construction sector, including cement extraction and distribution."
+    }
+  ],
+
+  "skills_title": "Technical skills",
+  "skills_intro": "Technologies and concepts used to develop and maintain data solutions.",
+
+  "skill_categories": {
+    "programming": "Programming",
+    "databases": "Databases",
+    "data_engineering": "Data Engineering",
+    "tools": "Development Tools",
+    "cloud": "Cloud Platforms"
+  },
+
+  "projects_title": "Featured projects",
+  "featured": "Featured",
   "view_repository": "View repository",
-  "featured": "Featured project"
+
+  "contact_title": "Let's connect",
+  "contact_intro": "Interested in data engineering, industrial data and technology-driven projects? Explore my work or connect with me.",
+  "github_label": "Explore my GitHub",
+  "linkedin_label": "Connect on LinkedIn",
+  "email_label": "Send me an email",
+
+  "footer_text": "Built with Python & Jinja2"
 }

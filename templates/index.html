@@ -2,94 +2,134 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-        content="{{ t.description }}">
-  <meta name="theme-color" content="#0b1120">
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="{{ t.description }}"
+    >
+    <meta name="theme-color" content="#0b1120">
 
-  <title>{{ name }} | Data Engineer</title>
+    <title>{{ name }} | Data Engineer</title>
 
-  <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/style.css">
 
-  <link rel="alternate" hreflang="en"
-        href="https://lauramud.github.io/en/">
-  <link rel="alternate" hreflang="es"
-        href="https://lauramud.github.io/es/">
+    <link
+        rel="alternate"
+        hreflang="en"
+        href="https://lauramud.github.io/en/"
+    >
+    <link
+        rel="alternate"
+        hreflang="es"
+        href="https://lauramud.github.io/es/"
+    >
 </head>
 
 <body>
-  <header class="header">
-    <nav class="navbar container"
-         aria-label="Main navigation">
 
-      <a href="#home" class="logo">
-        Laura<span>MUD.</span>
-      </a>
+<header class="header">
+    <nav
+        class="navbar container"
+        aria-label="Main navigation"
+    >
+        <a href="#home" class="logo">
+            Laura<span>MUD.</span>
+        </a>
 
-      <div class="nav-links">
-        <a href="#about">{{ t.nav_about }}</a>
-        <a href="#skills">{{ t.nav_skills }}</a>
-        <a href="#projects">{{ t.nav_projects }}</a>
-        <a href="#contact">{{ t.nav_contact }}</a>
-      </div>
-
-      <div class="language-switch"
-           aria-label="Select language">
-        <a href="../en/"
-           lang="en"
-           {% if lang == "en" %}
-           class="active" aria-current="page"
-           {% endif %}>EN</a>
-        <span>|</span>
-        <a href="../es/"
-           lang="es"
-           {% if lang == "es" %}
-           class="active" aria-current="page"
-           {% endif %}>ES</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section id="home" class="hero container">
-      <div class="hero-content">
-        <p class="eyebrow">
-          DATA ENGINEERING · INDUSTRIAL DATA
-        </p>
-
-        <h1>{{ t.greeting }}</h1>
-
-        <h2>{{ t.headline }}</h2>
-
-        <p class="hero-description">
-          {{ t.description }}
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">
-            {{ t.view_projects }}
-          </a>
-
-          <a class="btn btn-outline"
-             href="https://github.com/{{ github_username }}"
-             target="_blank"
-             rel="noopener noreferrer">
-            GitHub ↗
-          </a>
+        <div class="nav-links">
+            <a href="#about">{{ t.nav_about }}</a>
+            <a href="#experience">{{ t.nav_experience }}</a>
+            <a href="#skills">{{ t.nav_skills }}</a>
+            <a href="#projects">{{ t.nav_projects }}</a>
+            <a href="#contact">{{ t.nav_contact }}</a>
         </div>
-      </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="code-window">
-          <div class="window-header">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="window-title">pipeline.py</span>
-          </div>
-          <pre><code><span class="code-purple">class</span> <span class="code-blue">DataEngineer</span>:
+        <div
+            class="language-switch"
+            aria-label="Select language"
+        >
+            <a
+                href="../en/"
+                lang="en"
+                {% if lang == "en" %}
+                class="active"
+                aria-current="page"
+                {% endif %}
+            >EN</a>
+
+            <span aria-hidden="true">|</span>
+
+            <a
+                href="../es/"
+                lang="es"
+                {% if lang == "es" %}
+                class="active"
+                aria-current="page"
+                {% endif %}
+            >ES</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section id="home" class="hero container">
+        <div class="hero-content">
+            <p class="eyebrow">
+                DATA ENGINEERING · INDUSTRIAL DATA
+            </p>
+
+            <h1>{{ t.greeting }}</h1>
+            <h2>{{ t.headline }}</h2>
+
+            <p class="hero-description">
+                {{ t.description }}
+            </p>
+
+            <div class="hero-actions">
+                <a
+                    class="btn btn-primary"
+                    href="#projects"
+                >
+                    {{ t.view_projects }}
+                </a>
+
+                <a
+                    class="btn btn-outline"
+                    href="#contact"
+                >
+                    {{ t.contact_button }}
+                </a>
+
+                {% if profile.cv.get(lang) %}
+                <a
+                    class="btn btn-outline"
+                    href="../{{ profile.cv[lang] }}"
+                    download
+                >
+                    {{ t.download_cv }}
+                </a>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+            <div class="code-window">
+                <div class="window-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="window-title">
+                        pipeline.py
+                    </span>
+                </div>
+
+                <pre><code><span class="code-purple">class</span> <span class="code-blue">DataEngineer</span>:
     industry = [
         <span class="code-green">"Mining"</span>,
         <span class="code-green">"Energy"</span>,
@@ -98,156 +138,213 @@
 
     <span class="code-purple">def</span> <span class="code-blue">build</span>(self):
         <span class="code-purple">return</span> <span class="code-green">"Reliable Data"</span></code></pre>
+            </div>
         </div>
-      </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section container">
-      <p class="eyebrow">01 / ABOUT</p>
-      <h2 class="section-title">{{ t.about_title }}</h2>
-      <p class="section-description">
-        {{ t.about_text }}
-      </p>
+        <p class="eyebrow">01 / ABOUT</p>
+
+        <h2 class="section-title">
+            {{ t.about_title }}
+        </h2>
+
+        <p class="section-description">
+            {{ t.about_text }}
+        </p>
     </section>
 
-    <section id="skills" class="section container">
-      <p class="eyebrow">02 / TECH STACK</p>
-      <h2 class="section-title">{{ t.skills_title }}</h2>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section container">
+        <p class="eyebrow">02 / EXPERIENCE</p>
 
-      <div class="skills-grid">
-        {% for skill in skills %}
-        <div class="skill-card">
-          <span class="skill-symbol">◆</span>
-          <span>{{ skill }}</span>
-        </div>
-        {% endfor %}
-      </div>
-    </section>
+        <h2 class="section-title">
+            {{ t.experience_title }}
+        </h2>
 
-    
-<section id="projects" class="section container">
-  <p class="eyebrow">03 / PROJECTS</p>
+        <p class="section-description">
+            {{ t.experience_intro }}
+        </p>
 
-  <h2 class="section-title">
-    {{ t.projects_title }}
-  </h2>
+        <div class="industry-grid">
+            {% for industry in t.industries %}
+            <article class="industry-card">
+                <div
+                    class="industry-icon"
+                    aria-hidden="true"
+                >
+                    {{ industry.icon }}
+                </div>
 
-  <div class="projects-grid">
-    {% for project in projects %}
-
-    <article class="project-card">
-      <div class="project-top">
-        <span class="project-icon">⌘</span>
-
-        {% if project.featured %}
-        <span class="project-badge">
-          {{ t.featured }}
-        </span>
-        {% endif %}
-      </div>
-
-      <h3>{{ project.name }}</h3>
-
-      <p>
-        {% if lang == "en" %}
-          {{ project.description_en }}
-        {% else %}
-          {{ project.description_es }}
-        {% endif %}
-      </p>
-
-      <div class="project-technologies">
-        {% for technology in project.technologies %}
-        <span>{{ technology }}</span>
-        {% endfor %}
-      </div>
-
-      <div class="project-stats">
-        <span>★ {{ project.stars }}</span>
-      </div>
-
-      <a
-        class="project-link"
-        href="{{ project.url }}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {{ t.view_repository }} ↗
-      </a>
-    </article>
-
-    {% else %}
-    <p>
-      {% if lang == "en" %}
-        No public projects available yet.
-      {% else %}
-        Todavía no hay proyectos públicos disponibles.
-      {% endif %}
-    </p>
-    {% endfor %}
-  </div>
-</section>
-
-      <p class="eyebrow">03 / PROJECTS</p>
-      <h2 class="section-title">{{ t.projects_title }}</h2>
-
-      <div class="projects-grid">
-        {% for project in projects %}
-        <article class="project-card">
-          <div class="project-top">
-            <span class="project-icon">⌘</span>
-            <span class="project-badge">{{ t.featured }}</span>
-          </div>
-
-          <h3>{{ project.name }}</h3>
-
-          <p>
-            {% if lang == "en" %}
-              {{ project.description_en }}
-            {% else %}
-              {{ project.description_es }}
-            {% endif %}
-          </p>
-
-          <div class="project-technologies">
-            {% for technology in project.technologies %}
-            <span>{{ technology }}</span>
+                <h3>{{ industry.name }}</h3>
+                <p>{{ industry.description }}</p>
+            </article>
             {% endfor %}
-          </div>
-
-          <a class="project-link"
-             href="{{ project.url }}"
-             target="_blank"
-             rel="noopener noreferrer">
-            {{ t.view_repository }} ↗
-          </a>
-        </article>
-        {% endfor %}
-      </div>
+        </div>
     </section>
 
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <p class="eyebrow">04 / CONTACT</p>
-        <h2 class="section-title">{{ t.contact_title }}</h2>
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+        <p class="eyebrow">03 / TECH STACK</p>
 
-        <p>{{ t.description }}</p>
+        <h2 class="section-title">
+            {{ t.skills_title }}
+        </h2>
 
-        <a class="btn btn-primary"
-           href="https://github.com/{{ github_username }}"
-           target="_blank"
-           rel="noopener noreferrer">
-          GitHub Profile ↗
-        </a>
-      </div>
+        <p class="section-description">
+            {{ t.skills_intro }}
+        </p>
+
+        <div class="tech-grid">
+            {% for category in profile.skills %}
+            <article class="tech-card">
+                <h3>
+                    {{ t.skill_categories.get(
+                        category.category,
+                        category.category
+                    ) }}
+                </h3>
+
+                <div class="tech-tags">
+                    {% for technology in category["items"] %}
+                    <span>{{ technology }}</span>
+                    {% endfor %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
     </section>
-  </main>
 
-  <footer class="footer">
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+        <p class="eyebrow">04 / PROJECTS</p>
+
+        <h2 class="section-title">
+            {{ t.projects_title }}
+        </h2>
+
+        <div class="projects-grid">
+            {% for project in projects %}
+            <article class="project-card">
+                <div class="project-top">
+                    <span
+                        class="project-icon"
+                        aria-hidden="true"
+                    >⌘</span>
+
+                    {% if project.featured %}
+                    <span class="project-badge">
+                        {{ t.featured }}
+                    </span>
+                    {% endif %}
+                </div>
+
+                <h3>{{ project.name }}</h3>
+
+                <p>
+                    {% if lang == "en" %}
+                        {{ project.description_en }}
+                    {% else %}
+                        {{ project.description_es }}
+                    {% endif %}
+                </p>
+
+                <div class="project-technologies">
+                    {% for technology in project.technologies %}
+                    <span>{{ technology }}</span>
+                    {% endfor %}
+                </div>
+
+                <div class="project-stats">
+                    <span>★ {{ project.stars }}</span>
+                </div>
+
+                <a
+                    class="project-link"
+                    href="{{ project.url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="{{ t.view_repository }}: {{ project.name }}"
+                >
+                    {{ t.view_repository }} ↗
+                </a>
+            </article>
+
+            {% else %}
+            <p class="section-description">
+                {% if lang == "en" %}
+                    No public projects available yet.
+                {% else %}
+                    Todavía no hay proyectos públicos disponibles.
+                {% endif %}
+            </p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section
+        id="contact"
+        class="section contact-section"
+    >
+        <div class="container">
+            <p class="eyebrow">05 / CONTACT</p>
+
+            <h2 class="section-title">
+                {{ t.contact_title }}
+            </h2>
+
+            <p class="section-description">
+                {{ t.contact_intro }}
+            </p>
+
+            <div class="contact-links">
+                <a
+                    class="contact-card"
+                    href="{{ profile.github_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <strong>GitHub</strong>
+                    <span>{{ t.github_label }} ↗</span>
+                </a>
+
+                {% if profile.linkedin_url %}
+                <a
+                    class="contact-card"
+                    href="{{ profile.linkedin_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <strong>LinkedIn</strong>
+                    <span>{{ t.linkedin_label }} ↗</span>
+                </a>
+                {% endif %}
+
+                {% if profile.email %}
+                <a
+                    class="contact-card"
+                    href="mailto:{{ profile.email }}"
+                >
+                    <strong>Email</strong>
+                    <span>{{ t.email_label }} ↗</span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
     <div class="container footer-content">
-      <span>© {{ name }} · Data Engineer</span>
-      <span>Built with Python & Jinja2</span>
+        <span>
+            © {{ name }} · {{ profile.professional_title }}
+        </span>
+        <span>{{ t.footer_text }}</span>
     </div>
-  </footer>
+</footer>
+
 </body>
 </html>
