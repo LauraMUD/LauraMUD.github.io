@@ -45,8 +45,8 @@ jobs:
           test -s docs/en/index.html
           test -s docs/es/index.html
           test -s docs/static/style.css
-          test -s docs/static/cv/Laura_CV_EN.pdf
-          test -s docs/static/cv/Laura_CV_ES.pdf
+          test -s docs/static/cv/Laura_CV_EN_de.pdf
+          test -s docs/static/cv/Laura_CV_ES_de.pdf
           test -f docs/.nojekyll
 
           echo "Portfolio validation successful"
